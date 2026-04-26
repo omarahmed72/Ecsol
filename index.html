@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style4.css" />
   </head>
   <body>
     <!-- الشريط العلوي للأسعار والعملات -->
@@ -32,11 +32,75 @@
     <!-- شريط التنقل الرئيسي (Navbar) -->
     <nav class="navbar navbar-expand-lg fixed-top main-navbar">
       <div class="container-fluid px-4 px-lg-5">
-        <!-- الشعار -->
-        <!-- <a class="navbar-brand" href="#">
-          Escol
-          <span>CONSTRUCTION</span>
-        </a> -->
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
         <a class="navbar-brand" href="#">
           <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
         </a>
@@ -67,7 +131,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- القسم الرئيسي السلايدر (Hero Section Slider) -->
     <header class="hero-section">
@@ -164,18 +228,18 @@
         <!-- تمت إضافة كلاس reveal-element للظهور التدريجي -->
         <div class="col-lg-5 mb-5 mb-lg-0 reveal-element">
           <span class="section-subtitle">Who we are</span>
-          <h2>At a Glance</h2>
+          <h2>About Us</h2>
           <p>
-            Escol Construction PLC is a leading global engineering and
-            construction contractor primarily focused on infrastructure,
-            industrial and high-end commercial projects in the Middle East,
-            Africa, and the United States. Escol Construction also develops and
-            invests in concessions, owns 50% of BESIX Group, and holds a
-            building materials, facility management and equipment services
-            portfolio. The Group has consistently ranked among the world's top
-            contractors and is dual listed in the UAE and Egypt.
+            Founded in 2014, ECSOL Ecological Solutions Co. is an Egyptian
+            shareholding company specialized in engineering, procurement and
+            construction services for medium-scale projects in Egypt. With a
+            proven track record, high technical capabilities and a diversified
+            portfolio, ECSOL successfully executed multiple projects in various
+            activities. Our expertise covers civil constructions,
+            infrastructure, water and wastewater supplies, and electromechanical
+            installation.
           </p>
-          <button class="btn-custom"><span>Explore</span></button>
+          <a href="about.html" class="btn-custom"><span>Explore</span></a>
         </div>
         <!-- تمت إضافة كلاس reveal-element مع تأخير زمني بسيط لتظهر بعد النصوص -->
         <div
@@ -200,14 +264,13 @@
     </section>
 
     <!-- قسم آخر التحديثات والأخبار (Newsroom) -->
-    <section class="latest-updates">
+    <!-- <section class="latest-updates">
       <div class="container">
         <div class="d-flex justify-content-between align-items-end mb-4">
           <div>
             <span class="section-subtitle">Newsroom</span>
             <h2 class="mb-0">Our Latest Updates</h2>
           </div>
-          <!-- أزرار تمرير الأخبار -->
           <div class="d-flex gap-3">
             <button
               class="btn rounded-circle text-primary bg-white shadow-sm"
@@ -224,9 +287,7 @@
           </div>
         </div>
 
-        <!-- حاوية البطاقات (Carousel) -->
         <div class="carousel-container" id="newsCarousel">
-          <!-- البطاقة 1 -->
           <div class="news-card">
             <img
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -239,7 +300,6 @@
               </div>
             </div>
           </div>
-          <!-- البطاقة 2 -->
           <div class="news-card">
             <img
               src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -250,7 +310,6 @@
               <div class="news-title">Consortium to Develop 900 MW...</div>
             </div>
           </div>
-          <!-- البطاقة 3 -->
           <div class="news-card">
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -263,7 +322,6 @@
               </div>
             </div>
           </div>
-          <!-- البطاقة 4 -->
           <div class="news-card">
             <img
               src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -276,7 +334,6 @@
               </div>
             </div>
           </div>
-          <!-- البطاقة 5 -->
           <div class="news-card">
             <img
               src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
@@ -295,7 +352,7 @@
           <button class="btn-custom"><span>Explore Newsroom</span></button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- قسم الخدمات (Our Services) الأكورديون المتمدد -->
     <section class="services-section">
@@ -305,31 +362,34 @@
       </div>
 
       <div class="services-accordion">
-        <div
+        <a
+        href="services.html"
           class="service-panel"
           style="
             background-image: url(&quot;https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&quot;);
           "
         >
-          <div class="service-title">Concessions & Investments</div>
-        </div>
-        <div
+          <div class="service-title">INFRASTRUCTURE & CONSTRUCTION</div>
+        </a>
+        <a
+        href="services.html"
           class="service-panel"
           style="
             background-image: url(&quot;https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&quot;);
           "
         >
-          <div class="service-title">O&M and Facilities Management</div>
-        </div>
-        <div
+          <div class="service-title">INSTALLATION</div>
+        </a>
+        <a
+        href="services.html"
           class="service-panel"
           style="
             background-image: url(&quot;https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&quot;);
           "
         >
-          <div class="service-title">Construction</div>
-        </div>
-        <div
+          <div class="service-title">SUPPLIES & TRADING</div>
+        </a>
+        <!-- <div
           class="service-panel"
           style="
             background-image: url(&quot;https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&quot;);
@@ -344,7 +404,7 @@
           "
         >
           <div class="service-title">Equipment Services</div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -360,41 +420,71 @@
           <!-- مشروع 1 -->
           <div class="project-card">
             <img
-              src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Grand Egyptian Museum"
+              src="assets/A.jpg"
+              alt="Desalination Plant – Ain Sokhna, Egypt
+"
             />
-            <div class="project-title">Grand Egyptian Museum</div>
+            <div class="project-title">
+              Desalination Plant – Ain Sokhna, Egypt
+            </div>
           </div>
           <!-- مشروع 2 -->
           <div class="project-card">
             <img
-              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Egypt's Monorail"
+              src="assets/B.png"
+              alt="Desalination Plant – Dahab, South Sinai, Egypt
+"
             />
-            <div class="project-title">Egypt's Monorail</div>
+            <div class="project-title">
+              Desalination Plant – Dahab, South Sinai, Egypt
+            </div>
           </div>
           <!-- مشروع 3 -->
           <div class="project-card">
             <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="Texas A&M West"
+              src="assets/C.png"
+              alt="Desalination Plant – Abu Zenima, South Sinai, Egypt"
             />
-            <div class="project-title">Texas A&M West</div>
+            <div class="project-title">
+              Desalination Plant – Abu Zenima, South Sinai, Egypt
+            </div>
           </div>
           <!-- مشروع 4 -->
-          <div class="project-card">
+          <!-- <div class="project-card">
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
               alt="Project Wave"
             />
-            <div class="project-title">Project Wave</div>
-          </div>
+            <div class="project-title">
+              Desalination Plant – Ras Sedr, South Sinai, Egypt
+            </div>
+          </div> -->
+          <!-- مشروع 5 -->
+          <!-- <div class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Desalination Plant – TABA, South Sinai, Egypt"
+            />
+            <div class="project-title">
+              Desalination Plant – TABA, South Sinai, Egypt
+            </div>
+          </div> -->
+                    <!-- مشروع 6 -->
+          <!-- <div class="project-card">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Desalination Plant – TABA, South Sinai, Egypt"
+            />
+            <div class="project-title">
+              Desalination Plant – TABA, South Sinai, Egypt
+            </div>
+          </div> -->
         </div>
 
         <div
           class="container mt-4 d-flex justify-content-between align-items-center flex-wrap gap-3"
         >
-          <a href="#" class="btn-outline-custom">View All Projects</a>
+          <a href="projects.html" class="btn-outline-custom">View All Projects</a>
 
           <div class="custom-nav-btns">
             <button
@@ -420,10 +510,9 @@
         <div class="row align-items-center">
           <div class="col-md-8">
             <div class="footer-links justify-content-md-start">
-              <a href="#">Careers</a>
-              <a href="#">Contact Us</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms & Conditions</a>
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
             </div>
           </div>
           <div class="col-md-4 text-md-end">

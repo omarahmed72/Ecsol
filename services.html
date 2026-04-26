@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O&M and Facilities Management - Orascom Construction</title>
+
+    <!-- مكتبة البوتستراب للتجاوب -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- أيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- خطوط جوجل المستخدمة في التصميم -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
+
+    <!-- <style>
+      :root {
+        --primary-blue: #002d5b;
+        --accent-orange: #d1562b;
+        --text-gray: #666666;
+        --light-bg: #f9f9f9;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+        color: var(--text-gray);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-blue);
+      }
+
+      .top-bar {
+        background-color: transparent;
+        color: white;
+        font-size: 0.8rem;
+        padding: 5px 20px;
+        text-align: right;
+        position: absolute;
+        width: 100%;
+        z-index: 1031;
+        transition: all 0.3s ease;
+      }
+      .top-bar span {
+        margin-left: 15px;
+        font-weight: 500;
+      }
+
+      .main-navbar {
+        background-color: transparent;
+        padding: 20px 0;
+        transition: all 0.4s ease;
+        margin-top: 25px;
+      }
+      .main-navbar.scrolled {
+        background-color: var(--primary-blue);
+        padding: 10px 0;
+        margin-top: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .main-navbar.scrolled .top-bar {
+        display: none;
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: white !important;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .navbar-brand span {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+        font-weight: 400;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 10px;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+        position: relative;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange) !important;
+      }
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: var(--accent-orange);
+      }
+
+      .section-subtitle {
+        color: var(--accent-orange);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .section-subtitle::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+      .section-subtitle.center {
+        justify-content: center;
+      }
+      .section-subtitle.center::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+
+      .service-hero {
+        position: relative;
+        padding-top: 200px;
+        padding-bottom: 120px;
+        background:
+          linear-gradient(rgba(0, 20, 45, 0.7), rgba(0, 20, 45, 0.8)),
+          url("https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover no-repeat fixed;
+        color: white;
+      }
+
+      .service-hero h1 {
+        color: white;
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-top: 10px;
+        max-width: 800px;
+        line-height: 1.2;
+      }
+
+      .service-intro {
+        padding: 80px 0 40px 0;
+        background-color: white;
+      }
+
+      .service-intro p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+      }
+
+      .service-details-block {
+        padding: 60px 0;
+        background-color: white;
+      }
+
+      .service-details-block:nth-child(even) {
+        background-color: var(--light-bg);
+      }
+
+      .service-block-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: var(--primary-blue);
+      }
+
+      .service-block-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+      }
+
+      .service-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s ease;
+      }
+
+      .service-img-wrapper:hover img {
+        transform: scale(1.05);
+      }
+
+      .related-work-section {
+        padding: 100px 0;
+        background-color: var(--primary-blue);
+        color: white;
+      }
+
+      .related-work-section .section-subtitle {
+        color: white;
+      }
+      .related-work-section .section-subtitle::after {
+        background: white;
+      }
+      .related-work-section h2 {
+        color: white;
+        font-weight: 800;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+
+      .related-project-card {
+        position: relative;
+        height: 300px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+      }
+
+      .related-project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+        transition:
+          opacity 0.4s,
+          transform 0.6s;
+      }
+
+      .related-project-card:hover img {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+
+      .related-project-card h3 {
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 700;
+        z-index: 2;
+        width: 80%;
+        pointer-events: none;
+      }
+
+      .btn-outline-custom {
+        border: 1px solid white;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        transition: all 0.3s;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+
+      .btn-outline-custom:hover {
+        background: white;
+        color: var(--primary-blue);
+      }
+
+      .custom-nav-btns {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .nav-btn-line {
+        color: white;
+        background: transparent;
+        border: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+      }
+      .nav-btn-line.active {
+        color: var(--accent-orange);
+      }
+      .nav-btn-line.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--accent-orange);
+      }
+
+      .other-services-section {
+        padding: 100px 0;
+        background-color: white;
+      }
+
+      .other-service-card {
+        position: relative;
+        height: 350px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-bottom: 20px;
+      }
+
+      .other-service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 20, 45, 0.7);
+        z-index: 1;
+        transition: background 0.4s;
+      }
+
+      .other-service-card:hover::before {
+        background: rgba(0, 20, 45, 0.5);
+      }
+
+      .other-service-card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s;
+      }
+
+      .other-service-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .other-service-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .other-service-label {
+        color: white;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .other-service-title {
+        color: white;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      footer {
+        padding: 40px 0 20px;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+      .footer-links a,
+      .footer-social a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover,
+      .footer-social a:hover {
+        color: var(--accent-orange);
+      }
+      .copyright {
+        text-align: center;
+        color: var(--text-gray);
+        font-size: 0.8rem;
+      }
+
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .fade-in-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 991px) {
+        .service-hero h1 {
+          font-size: 2.5rem;
+        }
+        .service-img-wrapper {
+          height: 300px;
+          margin-bottom: 30px;
+        }
+        .main-navbar {
+          background-color: var(--primary-blue);
+          padding: 10px 0;
+        }
+        .top-bar {
+          display: none;
+        }
+        .fade-in-up {
+          transition-delay: 0s !important;
+        }
+        .service-block-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- قسم الهيرو الرئيسي للخدمة -->
+    <header class="service-hero">
+      <div class="container">
+        <span class="section-subtitle fade-in-up is-visible">SERVICES</span>
+        <h1 class="fade-in-up is-visible" style="transition-delay: 0.1s">
+          OUR SERVICES
+        </h1>
+      </div>
+    </header>
+
+    <!-- مقدمة الخدمة -->
+    <section class="service-intro container fade-in-up">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <p>
+            ECSOL has a professional working team capable to optimize system
+            design in order to ensure maximum economic and operational
+            efficiency through procurement, installation and commissioning
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- أقسام تفاصيل الخدمة (Alternating Blocks) -->
+
+    <!-- القسم 1: النص يسار، الصورة يمين -->
+    <section class="service-details-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 fade-in-up">
+            <span class="section-subtitle">Service 1</span>
+            <h2 class="service-block-title">INFRASTRUCTURE & CONSTRUCTION</h2>
+            <p class="service-block-text">
+              We carry out projects that serve industrial and residential
+              applications.<br />
+              We construct marine water works and sea water intake systems, and
+              underground water drainage systems. Water and waste water piping
+              systems, concrete tanks, electric cabling systems, sub-roads,
+              residential & office buildings.
+            </p>
+          </div>
+          <div
+            class="col-lg-6 offset-lg-1 order-1 order-lg-2 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <div class="service-img-wrapper rounded">
+              <img src="assets/services1.jpg" alt="Water Treatment" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- القسم 2: الصورة يسار، النص يمين -->
+    <section class="service-details-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 fade-in-up">
+            <div class="service-img-wrapper rounded">
+              <img src="assets/service2.jpg" alt="Wastewater Treatment" />
+            </div>
+          </div>
+          <div
+            class="col-lg-5 offset-lg-1 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <span class="section-subtitle">Service 2</span>
+            <h2 class="service-block-title">INSTALLATION</h2>
+            <p class="service-block-text">
+              ECSOL executes installation of Glass Fused to Steel sectional
+              bolted tanks that meet the highest standards of efficiency, safety
+              and sustainability. We performed large number of installation
+              works inside and outside Egypt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- القسم 3: النص يسار، الصورة يمين -->
+    <section class="service-details-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 fade-in-up">
+            <span class="section-subtitle">Service 3</span>
+            <h2 class="service-block-title">SUPPLIES & TRADING</h2>
+            <p class="service-block-text">
+              At ECSOL, we believe that a successful partnership goes beyond the
+              initial delivery. Our operations are anchored in Transparency and
+              Trust, ensuring that every transaction complies with the highest
+              industry standards. We are deeply committed to serving our
+              customers through a proactive approach, guaranteeing seamless
+              operations and reliable after sales support. By integrating
+              Sustainable Energy Solutions with our industrial expertise, we add
+              real value to your business and contribute to a greener future.
+            </p>
+          </div>
+          <div
+            class="col-lg-6 offset-lg-1 order-1 order-lg-2 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <div class="service-img-wrapper rounded">
+              <img src="assets/service3.jpg" alt="Monorail" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم المشاريع ذات الصلة (Related Work) -->
+    <!-- <section class="related-work-section">
+      <div class="container">
+        <span class="section-subtitle fade-in-up">FEATURED PROJECTS</span>
+        <div
+          class="d-flex justify-content-between align-items-end mb-4 fade-in-up"
+        >
+          <h2 class="m-0">Related Work</h2>
+          <div class="custom-nav-btns d-none d-md-flex">
+            <button class="nav-btn-line active">PREV.</button>
+            <button class="nav-btn-line">NEXT</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 fade-in-up" style="transition-delay: 0.1s">
+            <a href="project-details.html" class="related-project-card rounded">
+              <img
+                src="https://images.unsplash.com/photo-1504307651254-35680f356f12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Project"
+              />
+              <h3>Project Wave</h3>
+            </a>
+          </div>
+          <div class="col-md-4 fade-in-up" style="transition-delay: 0.2s">
+            <a href="project-details.html" class="related-project-card rounded">
+              <img
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Project"
+              />
+              <h3>Bahr El Baqr Wastewater Treatment Plant</h3>
+            </a>
+          </div>
+          <div class="col-md-4 fade-in-up" style="transition-delay: 0.3s">
+            <a href="project-details.html" class="related-project-card rounded">
+              <img
+                src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Project"
+              />
+              <h3>High-Speed Rail</h3>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 fade-in-up">
+          <a href="projects.html" class="btn-outline-custom"
+            >View All Projects</a
+          >
+        </div>
+      </div>
+    </section> -->
+
+    <!-- الفوتر (Footer) -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="footer-links justify-content-md-start">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="footer-social justify-content-md-end">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mt-3">
+          All rights reserved © Escol Construction PLC 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- سكربت البوتستراب والتأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // تغيير خلفية النافبار عند التمرير
+      const navbar = document.querySelector(".main-navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // إعداد الـ Intersection Observer لتشغيل حركات الظهور (Scroll Reveal)
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(".fade-in-up");
+
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              } else {
+                // إزالة الكلاس عند الخروج من الشاشة ليعمل الأنيميشن مرة أخرى عند العودة
+                entry.target.classList.remove("is-visible");
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.15, // تفعيل عندما يظهر 15%
+            rootMargin: "0px 0px -50px 0px",
+          },
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

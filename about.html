@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Orascom Construction</title>
+
+    <!-- مكتبة البوتستراب لتنسيق وتجاوب الموقع -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- أيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- خطوط جوجل -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
+    <!-- <style>
+      /* ---------------- الألوان والخطوط الأساسية ---------------- */
+      :root {
+        --primary-blue: #002d5b;
+        --accent-orange: #d1562b;
+        --text-gray: #666666;
+        --light-bg: #f9f9f9;
+      }
+
+      html {
+        scroll-behavior: smooth; /* تفعيل التمرير السلس للروابط الداخلية */
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+        color: var(--text-gray);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-blue);
+      }
+
+      /* ---------------- شريط التنقل (Navbar) ---------------- */
+      .main-navbar {
+        background-color: transparent;
+        padding: 20px 0;
+        transition: all 0.4s ease;
+      }
+
+      .main-navbar.scrolled {
+        background-color: var(--primary-blue);
+        padding: 10px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: white !important;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      .navbar-brand span {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+        font-weight: 400;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 10px;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: var(--accent-orange) !important;
+      }
+
+      /* تنسيق القائمة المنسدلة */
+      .dropdown-menu {
+        background-color: var(--primary-blue);
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        padding: 10px 0;
+      }
+
+      .dropdown-item {
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        transition: all 0.3s;
+      }
+
+      .dropdown-item:hover {
+        background-color: transparent;
+        color: var(--accent-orange);
+        padding-left: 25px;
+      }
+
+      /* ---------------- العناوين الفرعية ---------------- */
+      .section-subtitle {
+        color: var(--accent-orange);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .section-subtitle::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin-left: 15px;
+      }
+
+      /* ---------------- قسم الهيرو (At a Glance) ---------------- */
+      .about-hero {
+        position: relative;
+        padding-top: 150px;
+        padding-bottom: 80px;
+        background:
+          linear-gradient(rgba(0, 45, 91, 0.5), rgba(0, 45, 91, 0.7)),
+          url("https://images.unsplash.com/photo-1541888081640-14dd8a3eb258?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover fixed;
+        color: white;
+        text-align: center;
+      }
+
+      .about-hero h1 {
+        color: white;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+
+      .about-hero .section-subtitle {
+        justify-content: center;
+      }
+
+      .about-hero .section-subtitle::after,
+      .about-hero .section-subtitle::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+
+      /* قسم الوصف والإحصائيات تحت الهيرو */
+      .glance-details {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .glance-details p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 50px;
+        max-width: 900px;
+      }
+
+      .stat-item {
+        border-left: 1px solid #ddd;
+        padding-left: 20px;
+        margin-bottom: 30px;
+      }
+
+      .stat-item:first-child {
+        border-left: none;
+      }
+
+      .stat-item h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .stat-item p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin: 0;
+        text-transform: capitalize;
+      }
+
+      /* ---------------- قسم التاريخ (History) ---------------- */
+      .history-section {
+        padding: 100px 0;
+        position: relative;
+        min-height: 700px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background-color: var(--light-bg);
+      }
+
+      /* خلفية القسم تتغير برمجياً */
+      .history-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.2; /* شفافية لتظهر النصوص الزرقاء بوضوح كما في الفيديو */
+        transition: background-image 0.8s ease-in-out;
+        z-index: 0;
+      }
+
+      .history-content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+      }
+
+      /* قائمة السنوات الجانبية */
+      .history-years-list {
+        list-style: none;
+        padding: 0;
+        position: relative;
+      }
+
+      .history-years-list::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: rgba(0, 45, 91, 0.2);
+      }
+
+      .history-years-list li {
+        padding: 15px 0 15px 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        color: var(--text-gray);
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      .history-years-list li::after {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: var(--primary-blue);
+        opacity: 0.3;
+        transition: all 0.3s;
+      }
+
+      .history-years-list li.active {
+        color: var(--accent-orange);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .history-years-list li.active::after {
+        background-color: var(--accent-orange);
+        opacity: 1;
+        box-shadow: 0 0 0 4px rgba(209, 86, 43, 0.2);
+      }
+
+      /* عرض السنة والمحتوى الكبير */
+      .huge-year {
+        font-size: 8rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+        line-height: 1;
+        margin-bottom: 20px;
+        transition: opacity 0.4s;
+      }
+
+      .history-desc {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--primary-blue);
+        max-width: 500px;
+        transition: opacity 0.4s;
+      }
+
+      /* أزرار PREV / NEXT */
+      .ctrl-btn {
+        background: transparent;
+        border: none;
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+
+      .ctrl-btn::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent-orange);
+        transition: width 0.3s;
+      }
+
+      .ctrl-btn:hover::after {
+        width: 100%;
+      }
+
+      /* ---------------- قسم الاستراتيجية (Strategy) ---------------- */
+      .strategy-section {
+        padding: 100px 0;
+        background-color: white;
+      }
+
+      .strategy-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        transition: opacity 0.4s;
+      }
+
+      .strategy-desc {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        transition: opacity 0.4s;
+      }
+
+      /* أزرار الأرقام الدائرية */
+      .strategy-tabs {
+        display: flex;
+        gap: 15px;
+      }
+
+      .strategy-tabs button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background: white;
+        color: var(--text-gray);
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .strategy-tabs button.active,
+      .strategy-tabs button:hover {
+        border-color: var(--accent-orange);
+        color: var(--accent-orange);
+      }
+
+      .strategy-img-wrapper {
+        position: relative;
+        height: 450px;
+        overflow: hidden;
+      }
+
+      .strategy-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          opacity 0.5s,
+          transform 0.5s;
+      }
+
+      /* ---------------- قسم البصمة العالمية (Global Footprint) ---------------- */
+      .footprint-section {
+        padding: 100px 0;
+        background-color: var(--light-bg);
+        text-align: center;
+      }
+
+      .footprint-map {
+        max-width: 100%;
+        margin: 40px auto;
+        opacity: 0.7;
+      }
+
+      .custom-radio {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 15px;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--primary-blue);
+      }
+
+      .custom-radio input {
+        display: none;
+      }
+
+      .radio-mark {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid var(--primary-blue);
+        margin-right: 8px;
+        position: relative;
+      }
+
+      .custom-radio input:checked + .radio-mark::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--accent-orange);
+      }
+
+      .custom-radio input:checked + .radio-mark {
+        border-color: var(--accent-orange);
+      }
+
+      /* ---------------- قسم العلامات التجارية (Brands) ---------------- */
+      .brands-section {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .brand-card {
+        position: relative;
+        height: 250px;
+        background-color: var(--primary-blue);
+        overflow: hidden;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .brand-card img.bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.4;
+        transition:
+          transform 0.5s,
+          opacity 0.5s;
+      }
+
+      .brand-card:hover img.bg-img {
+        transform: scale(1.1);
+        opacity: 0.2;
+      }
+
+      .brand-card img.logo-img {
+        position: relative;
+        z-index: 1;
+        max-width: 60%;
+        max-height: 80px;
+        filter: brightness(0) invert(1); /* جعل اللوجو أبيض */
+      }
+
+      /* ---------------- قسم القيادة (Leadership) ---------------- */
+      .leadership-section {
+        padding: 100px 0;
+        background-color: var(--light-bg);
+      }
+
+      .leaders-slider {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 30px;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+
+      .leaders-slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      .leader-card {
+        min-width: 250px;
+        flex-shrink: 0;
+        text-align: center;
+      }
+
+      .leader-card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin-bottom: 15px;
+        filter: grayscale(100%);
+        transition: filter 0.4s;
+      }
+
+      .leader-card:hover img {
+        filter: grayscale(0%);
+      }
+
+      .leader-card h4 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .leader-card p {
+        font-size: 0.85rem;
+        color: var(--text-gray);
+      }
+
+      /* ---------------- الفوتر ---------------- */
+      footer {
+        padding: 40px 0 20px;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+
+      .footer-links a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-orange);
+      }
+
+      .footer-social a {
+        color: var(--primary-blue);
+        font-size: 1.2rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+
+      .footer-social a:hover {
+        color: var(--accent-orange);
+      }
+
+      /* أنيميشن الظهور */
+      .reveal-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+      .reveal-element.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 991px) {
+        .about-hero h1 {
+          font-size: 2.5rem;
+        }
+        .huge-year {
+          font-size: 5rem;
+        }
+        .history-section {
+          min-height: auto;
+          padding: 50px 0;
+        }
+        .stat-item {
+          border-left: none;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+        }
+        .main-navbar {
+          background-color: var(--primary-blue);
+          padding: 10px 0;
+        }
+        .dropdown-menu {
+          background-color: transparent;
+          box-shadow: none;
+          padding-left: 20px;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 1. قسم الهيرو (At a Glance) -->
+    <section id="glance">
+      <div class="about-hero">
+        <div class="container reveal-element">
+          <span class="section-subtitle">WHO WE ARE</span>
+          <h1>About Us</h1>
+        </div>
+      </div>
+
+      <div class="glance-details container reveal-element">
+        <p>
+          Orascom Construction PLC is a leading global engineering and
+          construction contractor primarily focused on infrastructure,
+          industrial and high-end commercial projects in the Middle East,
+          Africa, and the United States. Orascom Construction also develops and
+          invests in concessions, owns 50% of BESIX Group, and holds a building
+          materials, facility management and equipment services portfolio. The
+          Group has consistently ranked among the world's top contractors and is
+          dual listed in the UAE and Egypt.
+        </p>
+      </div>
+    </section>
+
+    <!-- أقسام تفاصيل إضافية (About Sections) -->
+    <section class="service-details-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 reveal-element">
+            <span class="section-subtitle">OUR MISSION</span>
+            <!-- <h2 class="service-block-title">Building the Future</h2> -->
+            <p class="service-block-text">
+              To deliver superior construction services through outstanding
+              technicalities and advanced project management. We empower our
+              team to maintain strict quality and safety standards.
+            </p>
+          </div>
+          <div
+            class="col-lg-6 offset-lg-1 order-1 order-lg-2 reveal-element"
+            style="transition-delay: 0.2s"
+          >
+            <div class="service-img-wrapper rounded">
+              <img src="assets/mission.jpg" alt="Our Mission" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-details-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 order-1 reveal-element">
+            <div class="service-img-wrapper rounded">
+              <img src="assets/vision.jpg" alt="Our Vision" />
+            </div>
+          </div>
+          <div
+            class="col-lg-5 offset-lg-1 order-2 reveal-element"
+            style="transition-delay: 0.2s"
+          >
+            <span class="section-subtitle">OUR VISION</span>
+            <!-- <h2 class="service-block-title">Leading the Industry</h2> -->
+            <p class="service-block-text">
+              To be recognized by our due to maintaining client as partner of
+              success reputation for excellence, and ability to deliver
+              exceptional results consistently.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الفوتر (Footer) -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="footer-links justify-content-md-start">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="footer-social justify-content-md-end">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mt-3">
+          All rights reserved © Escol Construction PLC 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // تغيير خلفية النافبار عند التمرير
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".main-navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // أنيميشن الظهور عند التمرير (Scroll Reveal)
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(".reveal-element");
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
+
+      // ==========================================
+      // منطق قسم التاريخ (History Logic)
+      // ==========================================
+      const historyData = [
+        {
+          year: "1950",
+          text: "Onsi Sawiris establishes a construction company in Upper Egypt.",
+          img: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+        },
+        {
+          year: "1976",
+          text: "Orascom Onsi Sawiris & Co. (OOSC) is founded as a general contractor and trading company.",
+          img: "https://images.unsplash.com/photo-1541888081640-14dd8a3eb258?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+        },
+        {
+          year: "1985",
+          text: "OOSC establishes its first overseas company, Contrack International LLC (Contrack) in Virginia, US.",
+          img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+        },
+        {
+          year: "1998",
+          text: "OOSC is converted from a limited partnership into a joint-stock company and renamed.",
+          img: "https://images.unsplash.com/photo-1518349619113-03114f06ac3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+        },
+      ];
+
+      let currentHistoryIdx = 0;
+      const historyListEl = document.getElementById("historyList");
+      const historyYearEl = document.getElementById("historyYear");
+      const historyTextEl = document.getElementById("historyText");
+      const historyBgImg = document.getElementById("historyBgImg");
+
+      // بناء قائمة السنوات
+      historyData.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerText = item.year;
+        li.onclick = () => setHistory(index);
+        historyListEl.appendChild(li);
+      });
+
+      function setHistory(index) {
+        currentHistoryIdx = index;
+        Array.from(historyListEl.children).forEach((li, i) => {
+          li.classList.toggle("active", i === index);
+        });
+
+        // تأثير الاختفاء والظهور (Fade Transition)
+        historyYearEl.style.opacity = 0;
+        historyTextEl.style.opacity = 0;
+
+        setTimeout(() => {
+          historyYearEl.innerText = historyData[index].year;
+          historyTextEl.innerText = historyData[index].text;
+          historyBgImg.style.backgroundImage = `url('${historyData[index].img}')`;
+
+          historyYearEl.style.opacity = 1;
+          historyTextEl.style.opacity = 1;
+        }, 400);
+      }
+
+      function changeHistory(step) {
+        let newIdx = currentHistoryIdx + step;
+        if (newIdx < 0) newIdx = historyData.length - 1;
+        if (newIdx >= historyData.length) newIdx = 0;
+        setHistory(newIdx);
+      }
+
+      setHistory(0);
+
+      // ==========================================
+      // منطق قسم الاستراتيجية (Strategy Logic)
+      // ==========================================
+      const strategyData = [
+        {
+          title: "Strengthen Construction Market Leadership",
+          text: "Expand market presence as an EPC contractor across our core markets in the Middle East, Africa and USA and strengthen capabilities across new and existing sectors. We focus on pursuing well-funded projects where we hold a competitive edge.",
+          img: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        },
+        {
+          title: "Develop Concessions & Investments",
+          text: "Focus on creating long-term value and generating recurring income through investments in infrastructure, industrial, and commercial projects across key strategic markets.",
+          img: "https://images.unsplash.com/photo-1628100140700-11100f983693?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        },
+        {
+          title: "Grow O&M Capabilities",
+          text: "Expand our Operations and Maintenance portfolio to ensure lifecycle support for large scale projects, providing sustainable and efficient facilities management.",
+          img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        },
+        {
+          title: "Enhance Building Materials",
+          text: "Optimize and expand our building materials portfolio to secure supply chain efficiency and maintain cost leadership across all major construction operations.",
+          img: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        },
+      ];
+
+      let currentStrategyIdx = 0;
+      const strategyTabsEl = document.getElementById("strategyTabs");
+      const strategyTitleEl = document.getElementById("strategyTitle");
+      const strategyTextEl = document.getElementById("strategyText");
+      const strategyImgEl = document.getElementById("strategyImage");
+
+      strategyData.forEach((_, index) => {
+        const btn = document.createElement("button");
+        btn.className = "tab";
+        btn.innerText = `0${index + 1}`;
+        btn.onclick = () => setStrategy(index);
+        strategyTabsEl.appendChild(btn);
+      });
+
+      function setStrategy(index) {
+        currentStrategyIdx = index;
+        Array.from(strategyTabsEl.children).forEach((btn, i) => {
+          btn.classList.toggle("active", i === index);
+        });
+
+        strategyTitleEl.style.opacity = 0;
+        strategyTextEl.style.opacity = 0;
+        strategyImgEl.style.transform = "scale(0.95)";
+        strategyImgEl.style.opacity = 0.5;
+
+        setTimeout(() => {
+          strategyTitleEl.innerText = strategyData[index].title;
+          strategyTextEl.innerText = strategyData[index].text;
+          strategyImgEl.src = strategyData[index].img;
+
+          strategyTitleEl.style.opacity = 1;
+          strategyTextEl.style.opacity = 1;
+          strategyImgEl.style.transform = "scale(1)";
+          strategyImgEl.style.opacity = 1;
+        }, 400);
+      }
+
+      setStrategy(0);
+    </script>
+  </body>
+</html>

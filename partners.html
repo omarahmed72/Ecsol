@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners - Orascom Construction</title>
+
+    <!-- مكتبة البوتستراب للتجاوب -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- أيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- خطوط جوجل المستخدمة في التصميم -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
+    <!-- <style>
+      /* ---------------- الألوان الأساسية ---------------- */
+      :root {
+        --primary-blue: #002d5b;
+        --accent-orange: #d1562b;
+        --text-gray: #666666;
+        --light-bg: #f9f9f9;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+        color: var(--text-gray);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-blue);
+      }
+
+      /* ---------------- شريط التنقل (Navbar) ---------------- */
+      .top-bar {
+        background-color: transparent;
+        color: white;
+        font-size: 0.8rem;
+        padding: 5px 20px;
+        text-align: right;
+        position: absolute;
+        width: 100%;
+        z-index: 1031;
+        transition: all 0.3s ease;
+      }
+      .top-bar span {
+        margin-left: 15px;
+        font-weight: 500;
+      }
+
+      .main-navbar {
+        background-color: transparent;
+        padding: 20px 0;
+        transition: all 0.4s ease;
+        margin-top: 25px;
+      }
+      .main-navbar.scrolled {
+        background-color: var(--primary-blue);
+        padding: 10px 0;
+        margin-top: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .main-navbar.scrolled .top-bar {
+        display: none;
+      }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: white !important;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .navbar-brand span {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+        font-weight: 400;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 10px;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+        position: relative;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--accent-orange) !important;
+      }
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: var(--accent-orange);
+      }
+
+      /* ---------------- العناوين الفرعية ---------------- */
+      .section-subtitle {
+        color: var(--accent-orange);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .section-subtitle::after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+      .section-subtitle.center {
+        justify-content: center;
+      }
+      .section-subtitle.center::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+
+      /* ---------------- قسم الهيرو للشركاء ---------------- */
+      .partners-hero {
+        position: relative;
+        padding-top: 200px;
+        padding-bottom: 120px;
+        background:
+          linear-gradient(rgba(0, 20, 45, 0.6), rgba(0, 20, 45, 0.8)),
+          url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover no-repeat fixed;
+        color: white;
+        text-align: center;
+      }
+
+      .partners-hero h1 {
+        color: white;
+        font-size: 4rem;
+        font-weight: 800;
+        margin-top: 10px;
+        letter-spacing: -1px;
+      }
+
+      /* ---------------- مقدمة الصفحة ---------------- */
+      .intro-section {
+        padding: 80px 0;
+        background-color: white;
+        text-align: center;
+      }
+
+      .intro-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        max-width: 1000px;
+        margin: 0 auto 20px;
+      }
+
+      /* ---------------- سكاشن الكروت (صورة وكلام) المطابقة للفيديو ---------------- */
+      .content-grid-section {
+        padding: 60px 0;
+        background-color: white;
+      }
+
+      .content-grid-section.bg-light {
+        background-color: var(--light-bg);
+      }
+
+      .section-main-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .section-desc {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        max-width: 800px;
+      }
+
+      .info-card {
+        margin-bottom: 30px;
+      }
+
+      .info-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s ease;
+      }
+
+      .info-card:hover img {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: var(--primary-blue);
+      }
+
+      .info-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--text-gray);
+      }
+
+      /* ---------------- سكاشن (كلام وصورة) المتبادلة المطابقة للفيديو ---------------- */
+      .alternating-section {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .alternating-section.bg-light {
+        background-color: var(--light-bg);
+      }
+
+      .alt-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .alt-text {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+      }
+
+      .alt-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        position: relative;
+      }
+
+      /* ---------------- الفوتر ---------------- */
+      footer {
+        padding: 40px 0 20px;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+      .footer-links a,
+      .footer-social a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover,
+      .footer-social a:hover {
+        color: var(--accent-orange);
+      }
+      .copyright {
+        text-align: center;
+        color: var(--text-gray);
+        font-size: 0.8rem;
+      }
+
+      /* ---------------- أنيميشن الدخول ---------------- */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(50px);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .fade-in-up.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ========================================================================= */
+      /* التجاوب مع الشاشات (Responsive Design)        */
+      /* ========================================================================= */
+
+      @media (max-width: 991px) {
+        .partners-hero h1 {
+          font-size: 3rem;
+        }
+        .main-navbar {
+          background-color: var(--primary-blue);
+          padding: 10px 0;
+        }
+        .top-bar {
+          display: none;
+        }
+        .fade-in-up {
+          transition-delay: 0s !important;
+        }
+        .alt-img {
+          height: 400px;
+          margin-top: 30px;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .partners-hero {
+          padding-top: 130px;
+          padding-bottom: 60px;
+        }
+        .partners-hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .intro-section {
+          padding: 50px 0;
+        }
+        .intro-section p {
+          font-size: 0.95rem;
+        }
+
+        .section-main-title {
+          font-size: 1.8rem;
+        }
+        .info-card img {
+          height: 220px;
+        }
+
+        .alt-title {
+          font-size: 1.8rem;
+        }
+        .alt-img {
+          height: 300px;
+          margin-bottom: 30px;
+        }
+
+        .footer-links {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .footer-links a {
+          margin: 0;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- شريط التنقل (Navbar) -->
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- قسم الهيرو للشركاء -->
+    <header class="partners-hero">
+      <div class="container">
+        <span class="section-subtitle center fade-in-up is-visible"
+          >OUR NETWORK</span
+        >
+        <h1 class="fade-in-up is-visible" style="transition-delay: 0.1s">
+          Our Partners
+        </h1>
+      </div>
+    </header>
+
+    <!-- مقدمة الصفحة -->
+    <!-- <section class="intro-section fade-in-up">
+      <div class="container">
+        <span class="section-subtitle center">OUR RESPONSIBILITY</span>
+        <h2 class="mb-4" style="font-weight: 700">
+          Sustainable Growth & Development
+        </h2>
+        <p>
+          Sustainable development is about improving the quality of life for
+          everyone, now and for generations to come. Orascom Construction PLC
+          believes that the way we operate and the services we provide are
+          helping to improve the quality of life and build a brighter future for
+          people in the communities where we operate.
+        </p>
+        <p>
+          We are present in more than 20 countries. We believe strongly in
+          supporting and protecting the local communities in which we live and
+          work through our strategic partnerships.
+        </p>
+      </div>
+    </section> -->
+
+    <!-- السكشن الأول (كروت صور وكلام) مشابه لقسم Community Engagement في الفيديو -->
+    <!-- <section class="content-grid-section">
+      <div class="container">
+        <span class="section-subtitle fade-in-up">STRATEGIC COLLABORATION</span>
+        <h2 class="section-main-title fade-in-up">
+          Technology & Equipment Partners
+        </h2>
+        <p class="section-desc fade-in-up">
+          Growing operations means growing responsibilities, which is why we
+          make sure that our social and economic contributions remain active
+          through strong alliances with global technology leaders. We prioritize
+          the development of sustainable solutions and models with tangible
+          impact.
+        </p>
+
+        <div class="row mt-5">
+          <div
+            class="col-lg-4 col-md-6 fade-in-up"
+            style="transition-delay: 0.1s"
+          >
+            <div class="info-card">
+              <img
+                src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Siemens Mobility"
+              />
+              <h3>Siemens Mobility</h3>
+              <p>
+                Partnering to deliver Egypt's first high-speed rail network,
+                providing cutting-edge transportation technology and
+                comprehensive maintenance solutions.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <div class="info-card">
+              <img
+                src="https://images.unsplash.com/photo-1628100140700-11100f983693?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Alstom"
+              />
+              <h3>Alstom</h3>
+              <p>
+                Collaborating on the design, build, and maintenance of advanced
+                monorail systems to revolutionize urban transit and smart
+                mobility.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 fade-in-up"
+            style="transition-delay: 0.3s"
+          >
+            <div class="info-card">
+              <img
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Metito"
+              />
+              <h3>Metito</h3>
+              <p>
+                Working together to develop mega water and wastewater treatment
+                plants, ensuring access to clean water across the region.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- السكشن الثاني (كروت صور وكلام) مشابه لقسم Health & Safety في الفيديو -->
+    <section class="content-grid-section bg-light">
+      <div class="container">
+        <!-- <span class="section-subtitle fade-in-up">CORE VALUES</span> -->
+        <!-- <h2 class="section-main-title fade-in-up">
+          Joint Ventures & Subsidiaries
+        </h2>
+        <p class="section-desc fade-in-up">
+          The health and stability of our partnerships are at the forefront of
+          our strategy. We are responsible for the quality of our projects and
+          are fully committed to providing world-class execution by integrating
+          deeply with our subsidiaries and joint ventures.
+        </p> -->
+
+        <div class="row mt-5">
+          <div
+            class="col-lg-3 col-md-6 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <div class="info-card">
+              <img src="/assets/Pure Blue Tech.jpg" alt="Weitz" />
+              <h3>Pure Blue Tech</h3>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 fade-in-up"
+            style="transition-delay: 0.3s"
+          >
+            <div class="info-card">
+              <img src="/assets/DUCHTING PUMPEN2.jpg" alt="Contrack Watts" />
+              <h3>DUCHTING PUMPEN</h3>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 fade-in-up"
+            style="transition-delay: 0.3s"
+          >
+            <div class="info-card">
+              <img src="/assets/PERMASTORE2.jpg" alt="Contrack Watts" />
+              <h3>PERMASTORE</h3>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-6 fade-in-up"
+            style="transition-delay: 0.3s"
+          >
+            <div class="info-card">
+              <img src="/assets/ONYX.jpg" alt="Contrack Watts" />
+              <h3>ONYX</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- السكشن الثالث (كلام على اليسار وصورة كبيرة على اليمين) مشابه لقسم Environment -->
+    <section class="alternating-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 fade-in-up">
+            <span class="section-subtitle">SUSTAINABILITY PARTNERS</span>
+            <h2 class="alt-title">Pure Blue Tech</h2>
+            <p class="alt-text">
+              Pure Blue Tech’s proprietary Ultrasonic Reverse Osmosis (USRO)
+              elements deliver a leap in performance, reliability, and
+              sustainability. These tech-integrated elements are engineered for
+              demanding industrial and municipal membrane separations,
+              desalination, wastewater treatment, ultra pure water, and water
+              reuse applications, reducing costs and exceeding ESG goals
+            </p>
+            <p class="alt-text">
+              Semiconductors and Microelectronics • Food & Beverage • Oil & Gas
+              • Wastewater Reuse • Seawater Desalination • Government &
+              Utilities • Surface and Groundwater Purification
+            </p>
+          </div>
+          <div
+            class="col-lg-5 offset-lg-1 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <img
+              src="/assets/Pure Blue Tech.jpg"
+              alt="Wind Turbines"
+              class="alt-img rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- السكشن الرابع (صورة كبيرة على اليسار وكلام على اليمين) مشابه لقسم Safe Construction Sites -->
+    <section class="alternating-section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- في الموبايل ستظهر الصورة أولاً بفضل الترتيب -->
+          <div
+            class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <img
+              src="/assets/DUCHTING PUMPEN2.jpg"
+              alt="Construction Site"
+              class="alt-img rounded"
+            />
+          </div>
+          <div class="col-lg-6 offset-lg-1 order-1 order-lg-2 fade-in-up">
+            <span class="section-subtitle">OUR PRINCIPLES</span>
+            <h2 class="alt-title">DUCHTING PUMPEN</h2>
+            <p class="alt-text">
+              ECSOL is a dealer of DUCHTING PUMPEN of Germany.
+            </p>
+            <p class="alt-text">
+              DUCHTING PUMPEN manufactures pumps for almost every application in
+              which the transportation of fluids plays a role. They specialized
+              in the production of single stage/multistage high pressure pumps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- السكشن الثالث (كلام على اليسار وصورة كبيرة على اليمين) مشابه لقسم Environment -->
+    <section class="alternating-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 fade-in-up">
+            <span class="section-subtitle">SUSTAINABILITY PARTNERS</span>
+            <h2 class="alt-title">PERMASTORE</h2>
+            <p class="alt-text">
+              ECSOL is a dealer of PERMASTORE of the United Kingdom. Backed by
+              125 years of legacy, PERMASTORE is the world’s leading
+              manufacturer of premium engineered clear-span aluminum domes and
+              bolted steel storage tanks for dry and liquid applications. They
+              are considered the world’s leading storage solutions provider,
+              supplier and installer of GFS bolted tanks (Glass Fused to Steel).
+            </p>
+          </div>
+          <div
+            class="col-lg-5 offset-lg-1 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <img
+              src="/assets/PERMASTORE2.jpg"
+              alt="Wind Turbines"
+              class="alt-img rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- السكشن الرابع (صورة كبيرة على اليسار وكلام على اليمين) مشابه لقسم Safe Construction Sites -->
+
+    <!-- السكشن الرابع (صورة كبيرة على اليسار وكلام على اليمين) مشابه لقسم Safe Construction Sites -->
+    <section class="alternating-section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- في الموبايل ستظهر الصورة أولاً بفضل الترتيب -->
+          <div
+            class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <img
+              src="/assets/ONYX.jpg"
+              alt="Construction Site"
+              class="alt-img rounded"
+            />
+          </div>
+          <div class="col-lg-6 offset-lg-1 order-1 order-lg-2 fade-in-up">
+            <span class="section-subtitle">OUR PRINCIPLES</span>
+            <h2 class="alt-title">ONYX</h2>
+            <p class="alt-text">
+              ECSOL is a dealer of ONYX of Spain -a recognized worldwide
+              manufacturer and supplier of Solar Power Generation Systems
+              Including Turnkey building-integrated photovoltaics (BIPV)
+              solutions. Onyx Solar is the world’s leading manufacturer of
+              transparent photovoltaic (PV) glass for buildings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- الفوتر (Footer) -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="footer-links justify-content-md-start">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="footer-social justify-content-md-end">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mt-3">
+          All rights reserved © Escol Construction PLC 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- سكربت البوتستراب والتأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // تغيير خلفية النافبار عند التمرير
+      const navbar = document.querySelector(".main-navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // إعداد الـ Intersection Observer لتشغيل حركات الظهور (Scroll Reveal) باستمرار
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(".fade-in-up");
+
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              } else {
+                // إزالة الكلاس عند الخروج من الشاشة ليعمل الأنيميشن مرة أخرى عند العودة
+                entry.target.classList.remove("is-visible");
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.15, // تفعيل عندما يظهر 15% من العنصر
+            rootMargin: "0px 0px -50px 0px",
+          },
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

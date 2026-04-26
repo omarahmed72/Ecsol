@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Orascom Construction</title>
+
+    <!-- مكتبة البوتستراب للتجاوب -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- أيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- خطوط جوجل المستخدمة في التصميم -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
+    <!-- <style>
+        /* ---------------- الألوان الأساسية ---------------- */
+        :root {
+            --primary-blue: #002d5b;
+            --accent-orange: #d1562b;
+            --text-gray: #666666;
+            --light-bg: #f9f9f9;
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            overflow-x: hidden; 
+            color: var(--text-gray); 
+        }
+        
+        h1, h2, h3, h4, h5, h6 { 
+            font-family: 'Montserrat', sans-serif; 
+            color: var(--primary-blue); 
+        }
+
+        /* ---------------- شريط التنقل (Navbar) ---------------- */
+        .top-bar { background-color: transparent; color: var(--primary-blue); font-size: 0.8rem; padding: 5px 20px; text-align: right; position: absolute; width: 100%; z-index: 1031; transition: all 0.3s ease; }
+        .top-bar span { margin-left: 15px; font-weight: 500; }
+        
+        .main-navbar { background-color: transparent; padding: 20px 0; transition: all 0.4s ease; margin-top: 25px; }
+        
+        /* في هذه الصفحة، النافبار الأساسي لونه أزرق لأن الخلفية بيضاء (عكس الصفحات السابقة) */
+        .navbar-brand { font-weight: 800; font-size: 1.5rem; color: var(--primary-blue) !important; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; display: flex; flex-direction: column; line-height: 1; }
+        .navbar-brand span { font-size: 0.6rem; letter-spacing: 3px; font-weight: 400; }
+        
+        .nav-link { color: var(--primary-blue) !important; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin: 0 10px; letter-spacing: 0.5px; transition: color 0.3s; position: relative; }
+        .nav-link:hover { color: var(--accent-orange) !important; }
+        
+        /* النافبار عند التمرير */
+        .main-navbar.scrolled { background-color: white; padding: 10px 0; margin-top: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .main-navbar.scrolled .top-bar { display: none; }
+
+        /* ---------------- العناوين الفرعية ---------------- */
+        .section-subtitle { color: var(--accent-orange); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; }
+        .section-subtitle::after { content: ''; width: 40px; height: 1px; background: var(--accent-orange); margin: 0 15px; }
+        .section-subtitle.center { justify-content: center; }
+        .section-subtitle.center::before { content: ''; width: 40px; height: 1px; background: var(--accent-orange); margin: 0 15px; }
+
+        /* ---------------- قسم الهيرو (Contact Hero) ---------------- */
+        .contact-hero {
+            padding: 180px 0 80px;
+            background-color: white;
+            position: relative;
+        }
+
+        .contact-hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .contact-hero p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-gray);
+            max-width: 450px;
+        }
+
+        .contact-hero a.email-link {
+            color: var(--primary-blue);
+            text-decoration: underline;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-hero a.email-link:hover {
+            color: var(--accent-orange);
+        }
+
+        /* صورة الهيرو الجانبية */
+        .hero-side-img {
+            position: absolute;
+            right: 0;
+            top: 150px;
+            width: 40%;
+            height: 500px;
+            object-fit: cover;
+            clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+            box-shadow: -10px 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* ---------------- قسم المواقع (Locations) ---------------- */
+        .locations-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        /* تصميم التبويبات (Tabs) المطابق للفيديو */
+        .location-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 30px 0 50px;
+            list-style: none;
+            padding: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .location-tabs li {
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .location-tabs li:hover, .location-tabs li.active {
+            color: var(--accent-orange);
+        }
+
+        .location-tabs li.active::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-orange);
+        }
+
+        /* تفاصيل الموقع */
+        .location-content {
+            display: none; /* مخفي افتراضياً، يظهر بالـ JS */
+            animation: fadeIn 0.5s ease;
+        }
+
+        .location-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .location-city {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+
+        .location-details p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .get-directions {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+
+        .get-directions i { margin-left: 10px; transition: transform 0.3s; }
+        .get-directions:hover { color: var(--accent-orange); }
+        .get-directions:hover i { transform: translateX(5px); }
+
+        .location-img-wrapper {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .location-img-wrapper img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+
+        /* ---------------- قسم تطوير الأعمال (Business Development) ---------------- */
+        .contacts-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .contact-person-card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .contact-person-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .contact-person-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+
+        .contact-person-info .title {
+            font-size: 0.85rem;
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-person-info a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .contact-person-info a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+
+        /* ---------------- قسم الدعم / الإبلاغ (Whistleblowing) ---------------- */
+        .support-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+            border-top: 1px solid #eee;
+        }
+
+        .support-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .support-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .support-item h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .support-item a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .support-item a i { margin-left: 8px; font-size: 0.8rem; transition: transform 0.3s; }
+        .support-item a:hover { color: var(--accent-orange); }
+        .support-item a:hover i { transform: translateX(5px); }
+
+        /* ---------------- الفوتر ---------------- */
+        footer { padding: 40px 0 20px; background-color: white; border-top: 1px solid #eee; }
+        .footer-links a, .footer-social a { color: var(--primary-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin: 0 15px; transition: color 0.3s; }
+        .footer-links a:hover, .footer-social a:hover { color: var(--accent-orange); }
+        .copyright { text-align: center; color: var(--text-gray); font-size: 0.8rem; }
+
+        /* ---------------- أنيميشن الدخول ---------------- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========================================================================= */
+        /* التجاوب مع الشاشات (Responsive Design)        */
+        /* ========================================================================= */
+        @media (max-width: 991px) {
+            .contact-hero h1 { font-size: 3.5rem; }
+            .hero-side-img { position: relative; width: 100%; top: 0; margin-top: 40px; clip-path: none; height: 350px; }
+            .main-navbar { background-color: white; padding: 10px 0; }
+            .top-bar { display: none; }
+            .fade-in-up { transition-delay: 0s !important; }
+            .location-img-wrapper { height: 300px; margin-bottom: 30px; }
+        }
+
+        @media (max-width: 767px) {
+            .contact-hero { padding-top: 120px; padding-bottom: 50px; }
+            .contact-hero h1 { font-size: 2.5rem; }
+            .hero-side-img { height: 250px; }
+            
+            .locations-section { padding: 50px 0; }
+            .location-tabs { gap: 15px; justify-content: center; }
+            .location-city { font-size: 1.8rem; }
+            
+            .contacts-section { padding: 60px 0; }
+            .contact-person-card { flex-direction: column; align-items: flex-start; text-align: left; }
+            
+            .support-section { padding: 50px 0; }
+            .support-links { gap: 30px; flex-direction: column; }
+            
+            .footer-links { display: flex; flex-direction: column; gap: 10px; }
+            .footer-links a { margin: 0; }
+        }
+    </style> -->
+  </head>
+  <body>
+    <!-- الشريط العلوي -->
+
+    <!-- شريط التنقل (Navbar) ذو لون أزرق غامق للنصوص -->
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- القسم الرئيسي للاتصال (Hero Section) -->
+    <header class="contact-hero overflow-hidden">
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- <span class="section-subtitle fade-in-up is-visible"
+              >CONTACT US</span
+            > -->
+            <h1 class="fade-in-up is-visible" style="transition-delay: 0.1s">
+              Contact us
+            </h1>
+            <!-- <p class="fade-in-up is-visible" style="transition-delay: 0.2s">
+              Email us on
+              <a href="mailto:contactus@orascom.com" class="email-link"
+                >contactus@orascom.com</a
+              >
+              and our respective teams will get back to you soon.
+            </p> -->
+          </div>
+        </div>
+      </div>
+      <!-- الصورة الجانبية المميزة كما في الفيديو -->
+      <!-- <img
+        src="https://images.unsplash.com/photo-1541888081640-14dd8a3eb258?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+        alt="Building"
+        class="hero-side-img d-none d-lg-block fade-in-up is-visible"
+        style="transition-delay: 0.3s"
+      /> -->
+      <!-- صورة بديلة للموبايل لتظهر تحت النص -->
+      <img
+        src="https://images.unsplash.com/photo-1541888081640-14dd8a3eb258?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+        alt="Building"
+        class="hero-side-img d-block d-lg-none mt-4 fade-in-up is-visible"
+      />
+    </header>
+
+    <!-- قسم المواقع والمكاتب (Locations) -->
+    <section class="locations-section">
+      <div class="container">
+        <span class="section-subtitle center fade-in-up">FIND US IN</span>
+        <h2
+          class="text-center mb-4 fade-in-up"
+          style="font-weight: 800; font-size: 2.5rem"
+        >
+          Locations
+        </h2>
+
+        <!-- تبويبات الدول -->
+
+        <div class="row align-items-center">
+          <!-- صورة الموقع -->
+          <div class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1 fade-in-up">
+            <div class="location-img-wrapper rounded">
+              <img
+                id="locationImage"
+                src="assets/location.jpg"
+                alt="Egypt Office"
+              />
+            </div>
+          </div>
+
+          <!-- تفاصيل الموقع (تتغير بالـ JS) -->
+          <div
+            class="col-lg-6 offset-lg-1 order-1 order-lg-2 location-details fade-in-up"
+            style="transition-delay: 0.2s"
+          >
+            <!-- محتوى مصر (Default) -->
+            <div id="loc-egypt" class="location-content active">
+              <h3 class="location-city">Cairo</h3>
+              <p>
+                6M, El Nour St, Square No: 1226, Flat 4 ,Heliopolis, Southern
+                Region, El Nozha District ,Cairo, Egypt
+              </p>
+              <p class="mt-3"><strong>Tel:</strong> +20 (2) 22692415</p>
+              <p class="mt-3"><strong>Fax:</strong> +20 (2) 22697125</p>
+              <!-- <a href="#" class="get-directions"
+                >Get Directions <i class="fas fa-arrow-right"></i
+              ></a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم جهات الاتصال (Business Development) -->
+    <section class="contacts-section">
+      <div class="container">
+        <span class="section-subtitle fade-in-up">CONTACTS</span>
+        <!-- <h2 class="mb-5 fade-in-up" style="font-weight: 800; font-size: 2.5rem">
+          Administrative Manager
+        </h2> -->
+
+        <div class="row">
+          <div class="col-md-6 fade-in-up">
+            <div class="contact-person-card">
+              <img
+                src="assets/user.png"
+                alt="Tamer Shafik"
+                class="contact-person-img rounded"
+              />
+              <div class="contact-person-info">
+                <h4>Ahmed El Desoky</h4>
+                <p class="title">Administrative Manager</p>
+                <p class="mt-3"><strong>Mobile:</strong> +20 100 449 0700</p>
+
+                <a href="mailto:ahmed.eldesoky@ecsol-eg.com"
+                  >ahmed.eldesoky@ecsol-eg.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم الدعم والإبلاغ -->
+    <!-- <section class="support-section fade-in-up">
+      <div class="container">
+        <div class="support-links">
+          <div class="support-item">
+            <h5>Whistleblowing / Fraud / Corruption</h5>
+            <a href="#">Report an issue <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="support-item">
+            <h5>Sustainability Inquiries</h5>
+            <a href="#"
+              >Contact sustainability team <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="support-item">
+            <h5>Media & PR</h5>
+            <a href="#"
+              >Contact press office <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- الفوتر (Footer) -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="footer-links justify-content-md-start">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="footer-social justify-content-md-end">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mt-3">
+          All rights reserved © Escol Construction PLC 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- سكربت البوتستراب والتأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // تغيير خلفية النافبار عند التمرير (في صفحة اتصل بنا يبقى أبيض)
+      const navbar = document.querySelector(".main-navbar");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 20) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // دالة تبديل المواقع (Tabs Logic)
+      const locationsData = {
+        egypt:
+          "https://images.unsplash.com/photo-1577900232427-18219b9166a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        uae: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        ksa: "https://images.unsplash.com/photo-1586724237569-f3d0c1ebd8c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        algeria:
+          "https://images.unsplash.com/photo-1534063261623-1d07c08b5e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        usa: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      };
+
+      function switchLocation(locId, element) {
+        // إزالة كلاس active من كل التبويبات
+        const tabs = document.querySelectorAll(".location-tabs li");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+
+        // إضافة كلاس active للتبويب المختار
+        element.classList.add("active");
+
+        // إخفاء كل المحتويات
+        const contents = document.querySelectorAll(".location-content");
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // إظهار المحتوى الخاص بالدولة
+        document.getElementById("loc-" + locId).classList.add("active");
+
+        // تغيير الصورة بسلاسة
+        const imgEl = document.getElementById("locationImage");
+        imgEl.style.opacity = 0; // إخفاء مؤقت
+        setTimeout(() => {
+          imgEl.src = locationsData[locId];
+          imgEl.style.opacity = 1; // إظهار الصورة الجديدة
+        }, 300);
+      }
+
+      // إعداد الـ Intersection Observer لتشغيل حركات الظهور (Scroll Reveal)
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(".fade-in-up");
+
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+              } else {
+                // إزالة الكلاس لتعمل الحركة عند الصعود والنزول
+                entry.target.classList.remove("is-visible");
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px",
+          },
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

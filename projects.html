@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Orascom Construction</title>
+
+    <!-- مكتبة البوتستراب -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- أيقونات FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- خطوط جوجل -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style4.css" />
+    <!-- <style>
+      /* المتغيرات الأساسية للألوان المستخدمة في التصميم */
+      :root {
+        --primary-blue: #002d5b;
+        --accent-orange: #d1562b;
+        --text-gray: #666666;
+        --light-bg: #f9f9f9;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        color: var(--primary-blue);
+      }
+
+      /* ---------------- شريط التنقل (Navbar) ---------------- */
+      .top-bar {
+        background-color: transparent;
+        color: white;
+        font-size: 0.8rem;
+        padding: 5px 20px;
+        text-align: right;
+        position: absolute;
+        width: 100%;
+        z-index: 1031;
+        transition: all 0.3s ease;
+      }
+
+      .top-bar span {
+        margin-left: 15px;
+        font-weight: 500;
+      }
+
+      .main-navbar {
+        background-color: transparent;
+        padding: 20px 0;
+        transition: all 0.4s ease;
+        /* margin-top: 25px; مسافة للشريط العلوي */
+      }
+
+      /* عند النزول بالصفحة يتحول لون القائمة إلى الأزرق الغامق */
+      .main-navbar.scrolled {
+        background-color: var(--light-bg);
+        padding: 10px 0;
+        margin-top: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .main-navbar.scrolled .top-bar {
+        display: none;
+      }
+
+      /* .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: white !important;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+
+      .navbar-brand span {
+        font-size: 0.6rem;
+        letter-spacing: 3px;
+        font-weight: 400;
+      } */
+
+      .nav-link {
+        /* color: white !important; */
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 10px;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+      }
+
+      .main-navbar.scrolled .nav-link {
+        color: var(--primary-blue) !important;
+      }
+      .nav-link:hover {
+        color: var(--accent-orange) !important;
+      }
+
+      /* ---------------- العناوين الفرعية (البرتقالية) ---------------- */
+      .section-subtitle {
+        color: var(--accent-orange);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .section-subtitle::after,
+      .section-subtitle.center::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--accent-orange);
+        margin: 0 15px;
+      }
+
+      /* ========================================================= */
+      /* 1. أرشيف المشاريع (Archive View)        */
+      /* ========================================================= */
+
+      .projects-hero {
+        position: relative;
+        padding-top: 180px;
+        padding-bottom: 80px;
+        background:
+          linear-gradient(rgba(0, 20, 45, 0.7), rgba(0, 20, 45, 0.8)),
+          url("https://images.unsplash.com/photo-1541888081640-14dd8a3eb258?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover no-repeat fixed;
+        color: white;
+        text-align: center;
+      }
+
+      .projects-hero h1 {
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+        margin-top: 10px;
+        letter-spacing: -1px;
+      }
+
+      .filters-container {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        margin-top: 60px;
+      }
+
+      .filter-item {
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding-bottom: 5px;
+        width: 250px;
+        cursor: pointer;
+        transition: border-color 0.3s;
+      }
+
+      .filter-item:hover {
+        border-color: white;
+      }
+
+      .filter-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #ccc;
+      }
+
+      .filter-value {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+      }
+
+      /* شبكة المشاريع (Projects Grid) */
+      .projects-grid {
+        padding: 80px 0;
+        background-color: white;
+      }
+
+      .project-card {
+        margin-bottom: 50px;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+      }
+
+      .project-card .img-wrapper {
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .project-card.full-width .img-wrapper {
+        height: 550px;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      .project-card:hover img {
+        transform: scale(1.05);
+      }
+
+      /* تراكب داكن والنص يظهر في المشاريع ذات العرض الكامل (مثل المونوريل) */
+      .project-card.full-width .img-wrapper::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        transition: background 0.4s;
+      }
+      .project-card.full-width:hover .img-wrapper::after {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card.full-width h3.overlay-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        z-index: 2;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        margin: 0;
+        pointer-events: none;
+      }
+
+      .project-card h3.normal-title {
+        color: var(--primary-blue);
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-top: 20px;
+        transition: color 0.3s;
+      }
+
+      .project-card:hover h3.normal-title {
+        color: var(--accent-orange);
+      }
+
+      /* الترقيم (Pagination) */
+      .custom-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 40px;
+        padding-top: 40px;
+        border-top: 1px solid #eee;
+      }
+
+      .page-num {
+        color: var(--primary-blue);
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .page-num.active {
+        color: var(--accent-orange);
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--accent-orange);
+        border-radius: 50%;
+      }
+
+      .page-num:hover:not(.active) {
+        color: var(--accent-orange);
+      }
+
+      /* ========================================================= */
+      /* 2. تفاصيل المشروع (Details View)        */
+      /* ========================================================= */
+      #project-details-view {
+        display: none; /* مخفي افتراضياً */
+        background-color: white;
+      }
+
+      .details-hero {
+        height: 70vh;
+        width: 100%;
+        object-fit: cover;
+        margin-top: 80px; /* للنافبار */
+      }
+
+      .details-content {
+        padding: 80px 0;
+      }
+
+      /* الشريط الجانبي للتفاصيل (Metadata) */
+      .meta-group {
+        margin-bottom: 25px;
+      }
+
+      .meta-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent-orange);
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .meta-value {
+        font-size: 0.95rem;
+        color: var(--primary-blue);
+        font-weight: 500;
+        line-height: 1.4;
+      }
+      .meta-value a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        border-bottom: 1px solid var(--primary-blue);
+        transition: color 0.3s;
+      }
+      .meta-value a:hover {
+        color: var(--accent-orange);
+        border-color: var(--accent-orange);
+      }
+
+      /* المحتوى الرئيسي للمشروع */
+      .project-main-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+        margin-bottom: 30px;
+        letter-spacing: -1px;
+      }
+
+      .project-description p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+      }
+
+      /* معرض الصور المصغرة (Gallery) */
+      .project-gallery {
+        display: flex;
+        gap: 15px;
+        margin-top: 50px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-bottom: 10px;
+      }
+      .project-gallery::-webkit-scrollbar {
+        display: none;
+      }
+
+      .gallery-item {
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* زر الرجوع للأرشيف */
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary-blue);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        cursor: pointer;
+        margin-bottom: 40px;
+        font-size: 0.85rem;
+        transition: color 0.3s;
+      }
+      .back-btn i {
+        margin-right: 10px;
+      }
+      .back-btn:hover {
+        color: var(--accent-orange);
+      }
+
+      /* بانر المشروع التالي (Next Project) */
+      .next-project-banner {
+        height: 400px;
+        background:
+          linear-gradient(rgba(0, 20, 45, 0.6), rgba(0, 20, 45, 0.8)),
+          url("https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        transition: background 0.4s;
+      }
+      .next-project-banner:hover {
+        background:
+          linear-gradient(rgba(0, 20, 45, 0.4), rgba(0, 20, 45, 0.6)),
+          url("https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")
+            center/cover;
+      }
+
+      .next-project-banner .label {
+        font-size: 0.8rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        position: relative;
+      }
+      .next-project-banner .label::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 1px;
+        background: white;
+      }
+
+      .next-project-banner h2 {
+        font-size: 3rem;
+        color: white;
+        font-weight: 700;
+      }
+
+      /* ---------------- الفوتر ---------------- */
+      footer {
+        padding: 40px 0 20px;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+
+      .footer-links a,
+      .footer-social a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover,
+      .footer-social a:hover {
+        color: var(--accent-orange);
+      }
+      .copyright {
+        text-align: center;
+        color: var(--text-gray);
+        font-size: 0.8rem;
+      }
+
+      /* ========================================================= */
+      /* أنيميشن الدخول (Scroll Reveal Animations)                  */
+      /* ========================================================= */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(60px) scale(0.98);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .fade-in-up.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      @media (max-width: 991px) {
+        .projects-hero h1 {
+          font-size: 2.8rem;
+        }
+        .filters-container {
+          flex-direction: column;
+          gap: 30px;
+          align-items: center;
+        }
+        .project-main-title {
+          font-size: 2.5rem;
+        }
+        .project-card.full-width h3.overlay-title {
+          font-size: 2rem;
+          text-align: center;
+        }
+        .main-navbar {
+          background-color: var(--primary-blue);
+          padding: 10px 0;
+        }
+        .top-bar {
+          display: none;
+        }
+
+        /* إلغاء التأخير في الموبايل لتظهر العناصر سريعاً وبشكل متناسق فوق بعضها */
+        .fade-in-up {
+          transition-delay: 0s !important;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- شريط التنقل (Navbar) -->
+    <!-- <nav class="navbar navbar-expand-lg fixed-top main-navbar" id="navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          ORASCOM
+          <span>CONSTRUCTION</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Projects</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sustainability</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Newsroom</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg fixed-top main-navbar">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img class="w-50 img-fluid" src="./assets/logo.png" alt="" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          style="background-color: white"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center">
+            <!-- القائمة المنسدلة لقسم About Us بالروابط الداخلية -->
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+              <!-- <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li>
+                  <a class="dropdown-item" href="about.html#glance"
+                    >At a Glance</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#history">History</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#strategy"
+                    >Strategy</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#footprint"
+                    >Global Footprint</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#brands">Brands</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="about.html#leadership"
+                    >Leadership</a
+                  >
+                </li>
+              </ul> -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ========================================================================= -->
+    <!--                       عرض أرشيف المشاريع (Archive View)                   -->
+    <!-- ========================================================================= -->
+    <div id="archive-view">
+      <section class="projects-hero">
+        <div class="container">
+          <span
+            class="section-subtitle justify-content-center center fade-in-up is-visible"
+            >OUR WORK</span
+          >
+          <h1 class="fade-in-up is-visible" style="transition-delay: 0.1s">
+            Our Projects
+          </h1>
+
+          <!-- <div
+            class="filters-container fade-in-up is-visible"
+            style="transition-delay: 0.2s"
+          >
+            <div class="filter-item">
+              <div class="filter-label">Location</div>
+              <div class="filter-value">
+                All Locations <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+            <div class="filter-item">
+              <div class="filter-label">Sector</div>
+              <div class="filter-value">
+                All Sectors <i class="fas fa-chevron-down"></i>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="projects-grid container">
+        <div class="row">
+          <!-- صف 1 -->
+          <div class="col-md-6 fade-in-up">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img src="assets/A.jpg" alt="Project Wave" />
+              </div>
+              <h3 class="normal-title">
+                Desalination Plant – Ain Sokhna, Egypt
+              </h3>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in-up" style="transition-delay: 0.2s">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img src="assets/B.png" alt="Bahr El Baqr" />
+              </div>
+              <h3 class="normal-title">
+                Desalination Plant – Dahab, South Sinai, Egypt
+              </h3>
+            </div>
+          </div>
+
+          <!-- صف 2 (هذا المشروع قابل للضغط لعرض التفاصيل) -->
+          <div class="col-md-6 fade-in-up">
+            <div class="project-card" onclick="openProjectDetails()">
+              <div class="img-wrapper rounded shadow-sm">
+                <img src="assets/C.png" alt="High-Speed Rail" />
+              </div>
+              <h3 class="normal-title">
+                Desalination Plant – Abu Zenima, South Sinai, Egypt
+              </h3>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in-up" style="transition-delay: 0.2s">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img src="assets/D.png" alt="Grand Egyptian Museum" />
+              </div>
+              <h3 class="normal-title">
+                Desalination Plant – Ras Sedr, South Sinai, Egypt
+              </h3>
+            </div>
+          </div>
+
+          <!-- صف 3 (عرض الشاشة بالكامل) -->
+          <div class="col-12 fade-in-up mt-4 mb-5">
+            <div class="project-card full-width">
+              <div class="img-wrapper rounded shadow-sm">
+                <img src="assets/E.png" alt="Egypt's Monorail" />
+                <h3 class="overlay-title">
+                  Desalination Plant – TABA, South Sinai, Egypt
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- صف 4 -->
+          <!-- <div class="col-md-6 fade-in-up">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Texas A&M"
+                />
+              </div>
+              <h3 class="normal-title">Texas A&M Park West</h3>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in-up" style="transition-delay: 0.2s">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1582559937812-706b2f6f59da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Greater Cairo Metro"
+                />
+              </div>
+              <h3 class="normal-title">Greater Cairo Metro</h3>
+            </div>
+          </div> -->
+
+          <!-- صف 5 -->
+          <!-- <div class="col-md-6 fade-in-up">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Burullus Power Plant"
+                />
+              </div>
+              <h3 class="normal-title">Burullus Power Plant</h3>
+            </div>
+          </div>
+          <div class="col-md-6 fade-in-up" style="transition-delay: 0.2s">
+            <div class="project-card">
+              <div class="img-wrapper rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Magdi Yacoub"
+                />
+              </div>
+              <h3 class="normal-title">Magdi Yacoub Global Heart Centre</h3>
+            </div>
+          </div> -->
+        </div>
+
+        <!-- الترقيم (Pagination) -->
+        <!-- <div class="custom-pagination fade-in-up">
+          <span class="page-num active">1</span>
+          <span class="page-num">2</span>
+          <span class="page-num">3</span>
+          <span class="text-muted">...</span>
+          <span class="page-num">5</span>
+          <span class="page-num">6</span>
+          <span class="page-num">7</span>
+          <span class="page-num ms-3">Next</span>
+        </div> -->
+      </section>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!--                       عرض تفاصيل المشروع (Details View)                   -->
+    <!-- ========================================================================= -->
+    <div id="project-details-view">
+      <!-- صورة المشروع العريضة -->
+      <img
+        src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        alt="High-Speed Rail"
+        class="details-hero fade-in-up"
+      />
+
+      <section class="details-content container">
+        <!-- زر العودة للأرشيف -->
+        <div class="back-btn fade-in-up" onclick="closeProjectDetails()">
+          <i class="fas fa-arrow-left"></i> Back to Projects
+        </div>
+
+        <div class="row">
+          <!-- القائمة الجانبية للتفاصيل -->
+          <div
+            class="col-lg-3 mb-5 mb-lg-0 pr-lg-5 fade-in-up"
+            style="transition-delay: 0.1s"
+          >
+            <div class="meta-group">
+              <div class="meta-label">Sector</div>
+              <div class="meta-value">Infrastructure</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Year</div>
+              <div class="meta-value">Ongoing</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Client</div>
+              <div class="meta-value">
+                <a href="#">National Authority for Tunnels (NAT)</a>
+              </div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Location</div>
+              <div class="meta-value">Cairo, Egypt</div>
+            </div>
+            <div class="meta-group">
+              <div class="meta-label">Role</div>
+              <div class="meta-value">
+                Partner in a JV with Arab Contractors
+              </div>
+            </div>
+          </div>
+
+          <!-- المحتوى النصي الرئيسي -->
+          <div class="col-lg-9 fade-in-up" style="transition-delay: 0.2s">
+            <span class="section-subtitle">PROJECT DETAILS</span>
+            <h1 class="project-main-title">High-Speed Rail</h1>
+
+            <div class="project-description">
+              <p>
+                The High-Speed Rail Project will be the country's first-ever
+                electric railway. The rail lines will connect 60 cities
+                nationwide via trains that can operate at up to 230 km/hour. The
+                network, which will be accessible to around 90% of Egyptians,
+                will include three lines and provide about 500 million journeys
+                annually. It will also save up to 50% travel time, providing
+                efficient, safe, and affordable transportation for passengers
+                and goods across the country.
+              </p>
+              <p>
+                The high-speed rail system will also serve passengers and
+                freight and connect cities, seaports, dry ports, archaeological
+                cities, and tourist destinations all over Egypt, facilitating
+                the development of multiple sectors across the whole economy.
+                Once completed, the project will be the sixth largest of its
+                kind globally.
+              </p>
+            </div>
+
+            <!-- معرض الصور (Gallery) -->
+            <div
+              class="project-gallery mt-5 fade-in-up"
+              style="transition-delay: 0.3s"
+            >
+              <div class="gallery-item rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1544626154-8e100f2158ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Train interior"
+                />
+              </div>
+              <div class="gallery-item rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1623869680517-578d0f1ebbf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Station"
+                />
+              </div>
+              <div class="gallery-item rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Rail track"
+                />
+              </div>
+              <div class="gallery-item rounded shadow-sm">
+                <img
+                  src="https://images.unsplash.com/photo-1558000143-a6125032585f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                  alt="Metro interior"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- البانر السفلي للمشروع التالي -->
+      <div
+        class="next-project-banner fade-in-up"
+        onclick="closeProjectDetails()"
+      >
+        <div class="label">NEXT PROJECT</div>
+        <h2>Bahr El Baqr Wastewater Treatment Plant</h2>
+      </div>
+    </div>
+
+    <!-- الفوتر (Footer) -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="footer-links justify-content-md-start">
+              <a href="about.html">About Us</a>
+              <a href="services.html">Services</a>
+              <a href="contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <div class="footer-social justify-content-md-end">
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright mt-3">
+          All rights reserved © Escol Construction PLC 2026
+        </div>
+      </div>
+    </footer>
+
+    <!-- سكربت البوتستراب والتأثيرات -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const navbar = document.querySelector(".main-navbar");
+      const archiveView = document.getElementById("archive-view");
+      const detailsView = document.getElementById("project-details-view");
+
+      // تغيير خلفية النافبار عند التمرير
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          if (detailsView.style.display === "block" && window.scrollY <= 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        }
+      });
+
+      // إعداد الـ Intersection Observer لتشغيل حركات الظهور عند الوصول إليها بالسكرول
+      document.addEventListener("DOMContentLoaded", function () {
+        const revealElements = document.querySelectorAll(".fade-in-up");
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              // عندما يدخل العنصر في الشاشة، نقوم بإضافة الكلاس لتشغيل الأنيميشن
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                // نوقف مراقبته لكي تتم الحركة مرة واحدة فقط عند النزول
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            root: null,
+            threshold: 0.1, // تفعيل الحركة عندما يظهر 10% من العنصر
+            rootMargin: "0px 0px -50px 0px", // إعطاء مسافة سفلية ليبدو الدخول بشكل أفضل
+          },
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+      });
+
+      // دالة فتح تفاصيل المشروع
+      function openProjectDetails() {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        archiveView.style.display = "none";
+        detailsView.style.display = "block";
+        navbar.classList.add("scrolled");
+
+        // إعادة تشغيل الأنيميشن للعناصر داخل صفحة التفاصيل
+        const detailReveals = detailsView.querySelectorAll(".fade-in-up");
+        detailReveals.forEach((el) => el.classList.remove("is-visible"));
+
+        setTimeout(() => {
+          detailReveals.forEach((el) => el.classList.add("is-visible"));
+        }, 100);
+      }
+
+      // دالة العودة للأرشيف
+      function closeProjectDetails() {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        detailsView.style.display = "none";
+        archiveView.style.display = "block";
+        navbar.classList.remove("scrolled");
+      }
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1900,6 +1900,7 @@ body:has(.hero-section) .project-card:hover img {
   opacity: 1;
 }
 body:has(.hero-section) .project-title {
+  color: white;
   position: absolute;
   top: 50%;
   left: 30px;

@@ -2250,3 +2250,114 @@ body:has(.about-hero) .service-img-wrapper:hover img {
     margin-bottom: 30px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   11. Custom Lightbox Styles
+-------------------------------------------------------------------------- */
+.custom-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Do not prevent body scrolling, just overlay on top */
+}
+
+.custom-lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.custom-lightbox-overlay.active .custom-lightbox-content {
+  transform: scale(1);
+}
+
+.custom-lightbox-img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.custom-lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  z-index: 10000;
+}
+
+.custom-lightbox-btn:hover {
+  background: white;
+  color: var(--primary-blue);
+}
+
+.custom-lightbox-prev {
+  left: -70px;
+}
+
+.custom-lightbox-next {
+  right: -70px;
+}
+
+.custom-lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.custom-lightbox-close:hover {
+  color: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+  .custom-lightbox-prev {
+    left: 10px;
+  }
+  .custom-lightbox-next {
+    right: 10px;
+  }
+  .custom-lightbox-close {
+    top: 10px;
+    right: 10px;
+  }
+}

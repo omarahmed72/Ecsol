@@ -279,6 +279,11 @@ body:has(.about-hero) .glance-details {
   padding: 80px 0;
   background-color: white;
 }
+@media (max-width: 991px) {
+  body:has(.about-hero) .glance-details {
+    padding: 60px 20px;
+  }
+}
 body:has(.about-hero) .glance-details p {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -598,6 +603,7 @@ body:has(.about-hero) .reveal-element.active {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* --------------------------------------------------------------------------
    3. صفحة اتصل بنا (Contact Us)
@@ -1314,6 +1320,11 @@ body:has(.service-hero) .service-intro {
   padding: 80px 0 40px 0;
   background-color: white;
 }
+@media (max-width: 991px) {
+  body:has(.service-hero) .service-intro {
+    padding: 60px 20px;
+  }
+}
 body:has(.service-hero) .service-intro p {
   font-size: 1.05rem;
   line-height: 1.8;
@@ -1676,6 +1687,11 @@ body:has(.hero-section) .at-a-glance p {
   color: var(--text-gray);
   line-height: 1.8;
   font-size: 0.95rem;
+}
+@media (max-width: 991px) {
+  body:has(.hero-section) .at-a-glance {
+    padding: 60px 20px;
+  }
 }
 
 body:has(.hero-section) .reveal-element {
@@ -2273,6 +2289,7 @@ body:has(.about-hero) .service-img-wrapper:hover img {
   }
   body:has(.projects-hero) .project-card {
     margin-bottom: 30px;
+    padding: 0 15px;
   }
   body:has(.projects-hero) .project-card .img-wrapper {
     height: 220px;
